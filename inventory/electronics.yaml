@@ -1,0 +1,264 @@
+# 電子機器インベントリ
+# アンプ、DAC、トランスポート、プレーヤー等
+
+electronics:
+  - id: dsm-001
+    name: "Linn Majik DSM/3"
+    category: streamer          # integrated: streamer + dac + preamp + power amp
+    manufacturer: "Linn"
+    model: "Majik DSM/3 (2016/2018 Variant with HDMI-2)"
+    purchased_date: 2024-07-05   # 中古購入
+    purchase_price: 172480       # JPY
+    serial_number: "1445626"
+    specifications:
+      type: "Integrated digital music player, preamplifier and power amplifier"
+      features:
+        - "DS Design"
+        - "Chakra Power"
+        - "Dynamik Power Supply"
+        - "Aktiv Operation"
+        - "Exakt connections"
+        - "Space Optimisation"
+        - "Phono/Turntable input stage (MM)"
+        - "Surround Sound (LPCM only)"
+        - "HDMI-2 with ARC"
+      streaming:
+        - "Tidal"
+        - "Qobuz"
+        - "Spotify Connect"
+        - "Roon"
+        - "Deezer"
+        - "AirPlay"
+        - "Calm Radio"
+      inputs:
+        - "HDMI x 4 (1.4 & 2.0)"
+        - "SPDIF Coax x 1"
+        - "Toslink Optical x 2"
+        - "RCA Line x 2"
+        - "RCA Phono (MM) x 1"
+        - "3.5mm AUX (front)"
+        - "Ethernet (100Base-T)"
+        - "Exakt Link"
+      outputs:
+        - "HDMI (with ARC)"
+        - "SPDIF Coax"
+        - "Toslink Optical"
+        - "Speaker terminals"
+        - "Pre Out (RCA)"
+        - "RCA Record Out (fixed)"
+        - "Headphone 3.5mm (front)"
+        - "Exakt Link"
+      adc_spec: "96kHz/24bit"
+      phono_input: "MM, 50mV rms max, 47kΩ, 68pF"
+      headphone_out: "6V rms max, 11Ω"
+    production_period: "Sept 2016 - Aug 2020"
+    replaced_by: "Majik DSM/4 (2020 Variant)"
+    notes: ""
+
+  - id: avr-001
+    name: "Marantz NR1608"
+    category: amplifier          # AV receiver
+    manufacturer: "Marantz"
+    model: "NR1608"
+    purchased_date: 2025-05-28   # 中古購入
+    purchase_price: 14466        # JPY
+    serial_number: ""
+    specifications:
+      type: "7.2ch Slim AV Receiver"
+      power_output:
+        rated: "50W x 7 (8Ω, 20Hz-20kHz, THD 0.08%)"
+        rated_6ohm: "70W x 7 (6Ω, 1kHz, THD 0.7%)"
+        max_practical: "100W (6Ω, 1kHz, THD 10%, 1ch)"
+      speaker_impedance: "4-16Ω"
+      analog:
+        input_sensitivity: "130mV"
+        frequency_response: "10Hz-100kHz (+1, -3dB, Direct)"
+        snr: "98dB (IHF-A, Direct)"
+      features:
+        - "Dolby Atmos"
+        - "DTS:X"
+        - "4K Ultra HD"
+        - "HDR (HDR10, Dolby Vision, HLG)"
+        - "HDCP 2.2"
+        - "Audyssey MultEQ"
+        - "HEOS Built-in"
+        - "AirPlay"
+        - "Bluetooth 3.0+EDR (A2DP, AVRCP, SBC)"
+        - "Wi-Fi (802.11a/b/g/n, 2.4GHz/5GHz)"
+        - "FM/AM Tuner"
+      inputs:
+        - "HDMI x 8"
+        - "Component x 1"
+        - "Composite x 2"
+        - "RCA Stereo x 3"
+        - "Phono (MM) x 1"
+        - "Optical x 1"
+        - "Coaxial x 1"
+        - "USB (front)"
+        - "Ethernet"
+      outputs:
+        - "HDMI x 1 (with ARC)"
+        - "Speaker terminals x 7"
+        - "Subwoofer Pre Out x 2"
+        - "Zone 2 Pre Out"
+        - "Headphone"
+    notes: ""
+
+  - id: player-001
+    name: "Apple TV 4K (1st Gen)"
+    category: player             # streaming player
+    manufacturer: "Apple"
+    model: "A1842"
+    purchased_date: 2025-05-31   # 中古購入
+    purchase_price: 4000         # JPY
+    serial_number: "DY3W3AS2J1WF"
+    specifications:
+      type: "4K HDR Streaming Media Player"
+      processor: "A10X Fusion (64-bit)"
+      storage: "32GB or 64GB"
+      video_formats:
+        - "H.264/HEVC SDR: up to 2160p 60fps"
+        - "HEVC Dolby Vision (Profile 5)"
+        - "HDR10"
+        - "MPEG-4: up to 640x480 30fps"
+      audio_formats:
+        - "Dolby Atmos"
+        - "Dolby Digital Plus 7.1 (E-AC-3)"
+        - "Dolby Digital 5.1 (AC-3)"
+        - "Apple Lossless (ALAC)"
+        - "FLAC"
+        - "AAC (up to 320Kbps)"
+        - "MP3 (up to 320Kbps)"
+        - "AIFF"
+        - "WAV"
+      connectivity:
+        - "HDMI 2.0a"
+        - "Gigabit Ethernet"
+        - "Wi-Fi 802.11ac MIMO (2.4GHz/5GHz)"
+        - "Bluetooth 5.0"
+        - "IR Receiver"
+      dimensions:
+        height: "35mm"
+        width: "98mm"
+        depth: "98mm"
+        weight: "425g"
+    notes: "リモコンなし"
+
+  - id: projector-001
+    name: "XGIMI Elfin"
+    category: player             # projector / display
+    manufacturer: "XGIMI"
+    model: "Elfin"
+    purchased_date: 2025-02-06   # 中古購入
+    purchase_price: 15000        # JPY
+    serial_number: ""
+    specifications:
+      type: "Home Projector"
+      display:
+        resolution: "1920x1080 (Full HD)"
+        technology: "DLP (0.33\" DMD)"
+        brightness: "600 ISO lumens"
+        hdr: "HDR10/HLG"
+        3d: true
+        memc: true
+        throw_ratio: "1.2:1"
+        image_size: "40\" - 200\""
+        lamp_life: "25,000 hours"
+      features:
+        - "Auto Focus"
+        - "Auto Keystone Correction"
+        - "Intelligent Obstacle Avoidance"
+        - "Intelligent Screen Alignment"
+      audio:
+        speakers: "2 x 3W Harman/Kardon"
+        formats:
+          - "Dolby Audio"
+          - "Dolby Digital"
+          - "Dolby Digital Plus"
+          - "DTS-HD"
+          - "DTS Studio Sound"
+      system:
+        os: "Android TV"
+        ram: "2GB"
+        storage: "16GB"
+        streaming: "Chromecast built-in / Airscreen"
+      connectivity:
+        - "HDMI x 1 (ARC)"
+        - "USB x 1"
+        - "Headphone 3.5mm x 1"
+        - "Wi-Fi"
+        - "Bluetooth"
+      power:
+        input: "AC100-240V, 50/60Hz"
+        consumption: "65W"
+        noise: "<30dB"
+      dimensions:
+        width: "192.1mm"
+        depth: "194.19mm"
+        height: "48.31mm"
+        weight: "0.9kg"
+    notes: ""
+
+  - id: turntable-001
+    name: "Technics SL-1200MK5"
+    category: transport          # turntable
+    manufacturer: "Technics"
+    model: "SL-1200MK5"
+    purchased_date: null         # 中古購入、日付不明
+    purchase_price: null         # JPY
+    serial_number: ""
+    specifications:
+      type: "Direct Drive Turntable"
+      drive_system: "Direct Drive"
+      motor: "Brushless DC motor"
+      platter: "Aluminum die-cast (332mm)"
+      speeds: "33 1/3, 45 rpm"
+      pitch_control: "+/- 8%"
+      wow_flutter: "0.01% WRMS"
+      snr: "78dB (DIN-B)"
+      tonearm:
+        type: "Static Balance, S-shaped"
+        effective_length: "230mm"
+        overhang: "15mm"
+        tracking_force: "0 - 4g"
+        cartridge_weight: "5.6 - 12g (with headshell)"
+      outputs:
+        - "Phono RCA"
+        - "Ground terminal"
+      power:
+        input: "AC100V, 50/60Hz"
+        consumption: "12W"
+      dimensions:
+        width: "453mm"
+        depth: "353mm"
+        height: "162mm"
+        weight: "12kg"
+    notes: "中古購入"
+
+  - id: player-002
+    name: "PlayStation 4 Slim"
+    category: player             # game console
+    manufacturer: "Sony"
+    model: "CUH-2000 series (PS4 Slim)"
+    purchased_date: 2017-01-01   # 2017年購入、日付不明
+    purchase_price: null         # JPY
+    serial_number: ""
+    specifications:
+      type: "Game Console"
+      storage: "500GB or 1TB HDD"
+      video_output:
+        - "1080p"
+        - "HDR"
+      audio_formats:
+        - "Dolby Digital"
+        - "DTS"
+        - "AAC"
+        - "LPCM 7.1"
+      connectivity:
+        - "HDMI"
+        - "USB x 2"
+        - "Ethernet"
+        - "Wi-Fi (802.11 a/b/g/n/ac)"
+        - "Bluetooth 4.0"
+      optical_out: true
+    notes: ""

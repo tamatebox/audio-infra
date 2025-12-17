@@ -1,0 +1,81 @@
+# ネットワーク機器インベントリ
+# オーディオ用サーバー、ルーター、スイッチ等
+
+network:
+  - id: server-001
+    name: "Intel NUC8i5BEH"
+    category: server             # server / router / switch / access_point
+    manufacturer: "Intel"
+    model: "NUC8i5BEH (BOXNUC8I5BEH)"
+    purchased_date: 2022-06-13
+    purchase_price: 27980        # JPY
+    serial_number: ""
+    specifications:
+      type: "Mini PC / Music Server"
+      processor: "Intel Core i5-8259U (2.3GHz / 3.8GHz Turbo, 4C/8T, 6MB cache, TDP 28W)"
+      graphics: "Intel Iris Plus Graphics 655"
+      memory:
+        slots: "2x DDR4 SODIMM"
+        max: "32GB"
+        speed: "DDR4-2400"
+      storage:
+        m2: "1x M.2 (Key M, 2242/2280, SATA or PCIe Gen3x4)"
+        sata: "1x 2.5\" SATA3 (up to 9.5mm)"
+      connectivity:
+        - "Gigabit LAN (Intel I219-V)"
+        - "Wi-Fi 5 (802.11ac Wave2)"
+        - "Bluetooth 5"
+        - "HDMI 2.0"
+        - "Thunderbolt 3 / USB-C"
+        - "USB 3.2 Gen2 x 4"
+        - "3.5mm headphone/mic"
+        - "Micro SDXC"
+        - "IR sensor"
+      power: "19V DC, 90W adapter"
+      dimensions:
+        width: "117mm"
+        depth: "112mm"
+        height: "51mm"
+    role: "Roon Core / MinimServer"
+    notes: "2018年発売モデル"
+
+  - id: router-001
+    name: "Buffalo WXR-5700AX7P"
+    category: router
+    manufacturer: "Buffalo"
+    model: "WXR-5700AX7P"
+    purchased_date: null
+    purchase_price: null         # JPY
+    serial_number: ""
+    specifications:
+      type: "Wi-Fi 6 Router"
+      wireless:
+        standards:
+          - "Wi-Fi 6 (802.11ax)"
+          - "802.11ac/n/a (5GHz)"
+          - "802.11n/g/b (2.4GHz)"
+        max_speed:
+          5ghz: "4803Mbps (160MHz 4x4)"
+          2_4ghz: "860Mbps (40MHz 3x3)"
+        antenna: "External 4x (5GHz), 3x (2.4GHz)"
+        security:
+          - "WPA3 Personal"
+          - "WPA2 Personal"
+          - "WPA/WPA2 Personal"
+      wired:
+        wan: "10Gbps (10G/5G/2.5G/1G/100M) x 1"
+        lan: "1Gbps x 4"
+      features:
+        - "IPv6 (IPoE/IPv4 over IPv6)"
+        - "OCN Virtual Connect"
+        - "v6 Plus"
+        - "transix"
+        - "USB 3.1 Gen1"
+        - "Net Threat Blocker 2 Premium"
+      power: "AC100V, 28.8W max"
+      dimensions:
+        width: "230mm"
+        height: "163mm"
+        depth: "60mm"
+        weight: "830g"
+    notes: ""

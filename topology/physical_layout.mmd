@@ -1,0 +1,77 @@
+%% Physical Layout - 機器とインシュレーターの積層構造
+%% 上から下への物理的な接触関係を記述
+
+graph TB
+    %% ========== フロントスピーカー (L/R共通) ==========
+    subgraph FRONT["フロントスピーカー (L/R)"]
+        direction TB
+        TANNOY[TANNOY Greenwich<br/>speaker-001]
+        INS1[木キューブ 20mm x4<br/>insulator-001]
+        INS2[MDF板 9mm<br/>insulator-002]
+        INS3[ソルボセイン 30mm x4<br/>insulator-003]
+        INS4[MDF板 12mm<br/>insulator-004]
+        INS5[木製シェルフ 60cm<br/>insulator-005]
+        FLOOR1[床]
+
+        TANNOY --> INS1 --> INS2 --> INS3 --> INS4 --> INS5 --> FLOOR1
+    end
+
+    %% ========== ターンテーブル ==========
+    subgraph TURNTABLE["ターンテーブル"]
+        direction TB
+        SL1200[Technics SL-1200MK5<br/>turntable-001]
+        INS6[Pailvens スパイク x3<br/>insulator-006]
+        INS7[アイリスオーヤマ棚板<br/>insulator-007]
+        INS8[木キューブ 20mm x4<br/>insulator-008]
+        RACK_TOP[テレビボード天板<br/>rack-001]
+
+        SL1200 --> INS6 --> INS7 --> INS8 --> RACK_TOP
+    end
+
+    %% ========== サブウーファー ==========
+    subgraph SUBWOOFER["サブウーファー"]
+        direction TB
+        SUB[YAMAHA YST-SW105<br/>speaker-003]
+        INS9[Pailvens スパイク x3<br/>+ スタンド<br/>insulator-009]
+        INS10[針葉樹板 200x200x24mm<br/>insulator-010]
+        INS11[東京防音 ソルボセイン x4<br/>insulator-011]
+        FLOOR2[床]
+
+        SUB --> INS9 --> INS10 --> INS11 --> FLOOR2
+    end
+
+    %% ========== Linn DSM ==========
+    subgraph LINN["Linn Majik DSM"]
+        direction TB
+        DSM[Linn Majik DSM/3<br/>dsm-001]
+        DSM_FOOT[本体インシュレーター]
+        INS12[東京防音 ソルボセイン x4<br/>insulator-012]
+        RACK_BTM[テレビボード下段<br/>rack-001]
+
+        DSM --> DSM_FOOT --> INS12 --> RACK_BTM
+    end
+
+    %% ========== テレビボード機器配置 ==========
+    subgraph RACK["テレビボード (rack-001)"]
+        direction TB
+        R_TOP[天板]
+        R_MID[中段]
+        R_BTM[下段]
+
+        R_TOP --- R_MID --- R_BTM
+    end
+
+    %% ラックと機器の関連
+    RACK_TOP -.-> R_TOP
+    RACK_BTM -.-> R_BTM
+
+    %% ========== スタイリング ==========
+    classDef equipment fill:#e3f2fd,stroke:#1565c0
+    classDef insulator fill:#fff8e1,stroke:#f9a825
+    classDef support fill:#e8f5e9,stroke:#2e7d32
+    classDef rack fill:#fce4ec,stroke:#c2185b
+
+    class TANNOY,SL1200,SUB,DSM equipment
+    class INS1,INS2,INS3,INS4,INS5,INS6,INS7,INS8,INS9,INS10,INS11,INS12,DSM_FOOT insulator
+    class FLOOR1,FLOOR2,RACK_TOP,RACK_BTM support
+    class R_TOP,R_MID,R_BTM rack

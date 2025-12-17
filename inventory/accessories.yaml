@@ -1,0 +1,360 @@
+# アクセサリインベントリ
+# インシュレーター、ラック、電源タップ、ルームチューニング材等
+# カートリッジ、ヘッドシェル等
+
+accessories:
+  # カートリッジ
+  - id: cartridge-001
+    name: "LP GEAR AT3600L NSS"
+    category: cartridge
+    manufacturer: "LP GEAR"
+    model: "AT3600L NSS (NUDE SCHWARZ STYLUS)"
+    purchased_date: 2025-01-01   # 2025年購入、日付不明
+    purchase_price: 10480        # JPY
+    specifications:
+      type: "VM Dual Magnet (MM equivalent)"
+      stylus: "Nude Schwarz (人工黒ダイヤ無垢 丸針)"
+      cantilever: "Aluminum"
+      frequency_response: "10Hz - 45kHz"
+      output: "3mV (1kHz)"
+      channel_balance: "2.5dB or less (1kHz)"
+      channel_separation: "18dB or more (1kHz)"
+      impedance: "2.8kΩ"
+      inductance: "45mH"
+      load_resistance: "47kΩ"
+      load_capacitance: "100-200pF"
+      tracking_force: "2.5g - 3.0g"
+      weight: "5.0g"
+      dimensions: "30mm(D) x 16.9mm(W) x 17.0mm(H)"
+    installed_on: "turntable-001"  # Technics SL-1200MK5
+    notes: "audio-technica AT3600L互換形状"
+
+  # ヘッドシェル
+  - id: headshell-001
+    name: "LP GEAR ULTIMATE Headshell"
+    category: headshell
+    manufacturer: "LP GEAR"
+    model: "ULTIMATE Headshell (Silver)"
+    purchased_date: 2025-01-01   # 2025年購入、日付不明
+    purchase_price: 7980         # JPY
+    specifications:
+      material: "Duralumin (航空宇宙産業用金属合金)"
+      finish: "Silver (Satin)"
+      terminal: "Gold-plated phosphor bronze"
+      lead_wire: "4N OFC insulated copper"
+      weight: "9g (リード線含む)"
+    installed_on: "turntable-001"  # Technics SL-1200MK5
+    notes: ""
+
+  # フロントスピーカー用インシュレーターシステム（L/R共通構成）
+  # 構成（上から下へ）:
+  #   TANNOY Greenwich
+  #   └─ 木キューブ (20mm角) x4
+  #   └─ MDF板 (9mm厚)
+  #   └─ ソルボセイン (30mm角 x 10mm厚) x4
+  #   └─ MDF板 (12mm厚)
+  #   └─ 木製シェルフ (約60cm)
+
+  - id: insulator-001
+    name: "木製キューブ"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 8                 # L/R各4個
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "木"
+      size: "20mm x 20mm x 20mm"
+    placement:
+      under: "speaker-001"      # TANNOY Greenwich
+      position: "四隅"
+      layer: 1                  # 最上層（スピーカー直下）
+    notes: ""
+
+  - id: insulator-002
+    name: "MDF板 (上)"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 2                 # L/R各1枚
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "MDF"
+      size: "9mm厚"
+    placement:
+      under: "speaker-001"
+      position: "全面"
+      layer: 2
+    notes: ""
+
+  - id: insulator-003
+    name: "ソルボセイン"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 8                 # L/R各4個
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "ソルボセイン"
+      size: "30mm x 30mm x 10mm厚"
+    placement:
+      under: "speaker-001"
+      position: "四隅"
+      layer: 3
+    notes: "制振・防振素材"
+
+  - id: insulator-004
+    name: "MDF板 (下)"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 2                 # L/R各1枚
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "MDF"
+      size: "12mm厚"
+    placement:
+      under: "speaker-001"
+      position: "全面"
+      layer: 4
+    notes: ""
+
+  - id: insulator-005
+    name: "木製シェルフ"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 2                 # L/R各1台
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "木"
+      size: "約60cm幅"
+    placement:
+      under: "speaker-001"
+      position: "スピーカースタンド"
+      layer: 5                  # 最下層
+    notes: ""
+
+  # ターンテーブル用インシュレーターシステム
+  # 構成（上から下へ）:
+  #   Technics SL-1200MK5 (純正ゴム足外し)
+  #   └─ Pailvens 金属インシュレーター x3 (前1、後2)
+  #   └─ アイリスオーヤマ 化粧棚板 LBC-645
+  #   └─ 木キューブ (20mm角) x4
+  #   └─ テレビボード天板
+
+  - id: insulator-006
+    name: "Pailvens 金属インシュレーター"
+    category: insulator
+    manufacturer: "Pailvens"
+    model: ""
+    quantity: 3                 # 前1、後2
+    purchased_date: "2024-12-04"
+    purchase_price: 2299.     # JPY
+    specifications:
+      material: "アルミ合金"
+      color: "シルバー"
+      size: "φ23mm x H20mm"
+      load_capacity: "300kg (4個あたり)"
+      weight: "180g"
+      type: "スパイク付き (スパイクスタンド不使用)"
+    placement:
+      under: "turntable-001"    # Technics SL-1200MK5
+      position: "前1、後1 (二点支持)"
+      layer: 1
+    notes: "ターンテーブル純正ゴム足を外して使用。両面粘着パッド付属。"
+
+  - id: insulator-007
+    name: "アイリスオーヤマ 化粧棚板"
+    category: insulator
+    manufacturer: "アイリスオーヤマ"
+    model: "LBC-645"
+    quantity: 1
+    purchased_date: "2024-08-07"
+    purchase_price: 1963     # JPY
+    specifications:
+      material: "木材 (ヒノキ)"
+      color: "ホワイト"
+      size: "W600 x D450 x H18mm"
+      weight: "1.89kg"
+    placement:
+      under: "turntable-001"
+      position: "全面"
+      layer: 2
+    notes: ""
+
+  - id: insulator-008
+    name: "木製キューブ (ターンテーブル用)"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 4
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "木"
+      size: "20mm x 20mm x 20mm"
+    placement:
+      under: "turntable-001"
+      position: "四隅"
+      layer: 3                  # 化粧棚板の下
+    notes: "テレビボード天板との間"
+
+  # サブウーファー用インシュレーターシステム
+  # 構成（上から下へ）:
+  #   YAMAHA YST-SW105
+  #   └─ Pailvens 金属インシュレーター x3 (前1、後2) + スパイクスタンド
+  #   └─ 針葉樹板 (200mm x 200mm x 24mm)
+  #   └─ 東京防音 ソルボセイン TSS-328 x4
+
+  - id: insulator-009
+    name: "Pailvens 金属インシュレーター (サブウーファー用)"
+    category: insulator
+    manufacturer: "Pailvens"
+    model: ""
+    quantity: 3                 # 前1、後2
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "アルミ合金"
+      color: "シルバー"
+      size: "φ23mm x H20mm"
+      load_capacity: "300kg (4個あたり)"
+      weight: "180g"
+      type: "スパイク付き (スパイクスタンド使用)"
+    placement:
+      under: "speaker-003"      # YAMAHA YST-SW105
+      position: "前1、後2 (三点支持)"
+      layer: 1
+    notes: "スパイクスタンド使用"
+
+  - id: insulator-010
+    name: "針葉樹板"
+    category: insulator
+    manufacturer: ""
+    model: ""
+    quantity: 1
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "針葉樹"
+      size: "200mm x 200mm x 24mm"
+    placement:
+      under: "speaker-003"
+      position: "全面"
+      layer: 2
+    notes: ""
+
+  - id: insulator-011
+    name: "東京防音 ソルボセイン"
+    category: insulator
+    manufacturer: "東京防音"
+    model: "TSS-328"
+    quantity: 4
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "ソルボセイン (粘着付)"
+      color: "ブラック"
+      size: "φ28mm x 3mm"
+      weight: "20g (4個入り)"
+    placement:
+      under: "speaker-003"
+      position: "四隅"
+      layer: 3
+    notes: ""
+
+  # Linn Majik DSM用インシュレーター
+  # 構成（上から下へ）:
+  #   Linn Majik DSM/3 (本体インシュレーター)
+  #   └─ 東京防音 ソルボセイン TSS-328 x4
+  #   └─ テレビボード棚板
+
+  - id: insulator-012
+    name: "東京防音 ソルボセイン (Linn DSM用)"
+    category: insulator
+    manufacturer: "東京防音"
+    model: "TSS-328"
+    quantity: 4
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "ソルボセイン (粘着付)"
+      color: "ブラック"
+      size: "φ28mm x 3mm"
+      weight: "20g (4個入り)"
+    placement:
+      under: "dsm-001"          # Linn Majik DSM/3
+      position: "四隅（本体インシュレーター下）"
+      layer: 1
+    notes: "本体純正インシュレーターの下に設置"
+
+  # オーディオラック（テレビボード）
+  - id: rack-001
+    name: "2段式テレビボード"
+    category: rack
+    manufacturer: ""            # 不明
+    model: ""
+    purchased_date: null        # 10年以上前に中古購入
+    purchase_price: null
+    specifications:
+      material: "木製本体 + ガラス天板"
+      color: "黒"
+      dimensions:
+        shelf_height: "13cm"    # 上段・下段共通
+        shelf_width: "48cm x 2" # 中央仕切りあり
+        shelf_depth: "21cm"     # 有効内寸
+      shelves: 3                # 天板 + 2段
+      casters: true
+    placement:
+      room_position: "リスニングポイント正面"
+    equipment_layout:
+      top: ["turntable-001", "player-001"]      # タンテ + Apple TV
+      middle: ["avr-001"]                        # AVアンプ
+      bottom: ["dsm-001", "player-002"]          # Linn + PS4
+    notes: "10年以上前にネット購入の中古品"
+
+  # 電源タップ
+  - id: power-strip-001
+    name: "重鉄タップ 6個口"
+    category: power_strip
+    manufacturer: "Procable"
+    model: "重鉄タップ 6個口"
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      outlets: 6
+      surge_protection: false
+      noise_filter: false
+    connected_devices:
+      - "dsm-001"          # Linn Majik DSM/3
+      - "avr-001"          # Marantz NR1608
+      - "player-001"       # Apple TV 4K
+      - "turntable-001"    # Technics SL-1200MK5
+      - "speaker-003"      # YAMAHA YST-SW105 (アクティブサブウーファー)
+      # PS4, プロジェクター, NUCは別電源
+    notes: "PS4・プロジェクター・NUC以外の機器を接続"
+
+  # 拡散パネル（自作）
+  - id: treatment-001
+    name: "自作拡散パネル"
+    category: room_treatment
+    manufacturer: "Handmade"
+    model: ""
+    quantity: 2
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      type: "拡散パネル"
+      material: ""              # 不明
+      dimensions: ""
+    placement:
+      wall: "前壁"
+      position: "フロントスピーカー真後ろ"
+    notes: "自作品"
+

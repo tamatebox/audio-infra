@@ -1,0 +1,71 @@
+%% Audio System Topology
+%% 機材(Node)とケーブル(Edge)の接続関係を記述
+
+graph LR
+    %% ========== ソース機器 ==========
+    NUC[Intel NUC8i5BEH<br/>Roon Core / MinimServer<br/>server-001]
+    SL1200[Technics SL-1200MK5<br/>turntable-001]
+    ATV[Apple TV 4K<br/>player-001]
+    PS4[PlayStation 4 Slim<br/>player-002]
+
+    %% ========== プロセッサ / アンプ ==========
+    DSM[Linn Majik DSM/3<br/>dsm-001]
+    AVR[Marantz NR1608<br/>avr-001]
+
+    %% ========== 出力機器 ==========
+    TANNOY_L[TANNOY Greenwich L<br/>speaker-001]
+    TANNOY_R[TANNOY Greenwich R<br/>speaker-001]
+    SUR_L[Handmade Surround L<br/>speaker-002]
+    SUR_R[Handmade Surround R<br/>speaker-002]
+    SUB[YAMAHA YST-SW105<br/>speaker-003]
+    PROJ[XGIMI Elfin<br/>projector-001]
+
+    %% ========== ネットワーク ==========
+    ROUTER[Buffalo WXR-5700AX7P<br/>router-001]
+
+    %% ========== 電源 ==========
+    OUTLET[壁コンセント]
+    POWER_STRIP[Procable 重鉄タップ<br/>power-strip-001]
+
+    %% ========== 信号経路 ==========
+
+    %% ネットワーク
+    NUC -.->|Ethernet| ROUTER
+    ROUTER -.->|lan-cable-001<br/>CAT6A 10m| DSM
+
+    %% 映像/サラウンド系 (AVR中心)
+    ATV -->|HDMI| AVR
+    PS4 -->|HDMI| AVR
+    AVR -->|hdmi-001<br/>Amazon HDMI 7.6m| PROJ
+    AVR -->|rca-001<br/>Amazon RCA 1.2m| DSM
+    AVR -->|spk-cable-002<br/>Amazon 16GA| SUR_L
+    AVR -->|spk-cable-002<br/>Amazon 16GA| SUR_R
+
+    %% 2chオーディオ系 (Linn DSM中心)
+    SL1200 -->|rca-002<br/>付属Phono RCA| DSM
+    DSM -->|rca-003<br/>Amazon RCA| SUB
+    DSM -->|spk-cable-001<br/>BELDEN 9497 3m| TANNOY_L
+    DSM -->|spk-cable-001<br/>BELDEN 9497 3m| TANNOY_R
+
+    %% ========== 電源経路 ==========
+    OUTLET -->|電源| POWER_STRIP
+    POWER_STRIP -.->|電源| DSM
+    POWER_STRIP -.->|電源| AVR
+    POWER_STRIP -.->|電源| ATV
+    POWER_STRIP -.->|電源| SL1200
+    POWER_STRIP -.->|電源| SUB
+    OUTLET -.->|電源| NUC
+    OUTLET -.->|電源| PROJ
+
+    %% ========== スタイリング ==========
+    classDef source fill:#e1f5fe,stroke:#01579b
+    classDef processor fill:#fff3e0,stroke:#e65100
+    classDef output fill:#e8f5e9,stroke:#2e7d32
+    classDef power fill:#fce4ec,stroke:#880e4f
+    classDef network fill:#f3e5f5,stroke:#7b1fa2
+
+    class NUC,SL1200,ATV,PS4 source
+    class DSM,AVR processor
+    class TANNOY_L,TANNOY_R,SUR_L,SUR_R,SUB,PROJ output
+    class OUTLET,POWER_STRIP power
+    class ROUTER network

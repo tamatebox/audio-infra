@@ -1,0 +1,147 @@
+# ケーブルインベントリ
+# 電源ケーブル、スピーカーケーブル、インターコネクト等
+
+cables:
+  # ========== スピーカーケーブル ==========
+
+  # TANNOY Greenwich用 (メイン L/R)
+  - id: spk-cable-001
+    name: "BELDEN 9497"
+    category: speaker
+    manufacturer: "Belden"
+    model: "9497"
+    length_m: 3.0
+    quantity: 2                 # L/R用
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      conductor_material: "錫メッキ銅"
+      gauge: "16AWG"
+      outer_diameter: "5.33mm"
+      conductor_diameter: "1.29mm"
+      structure: "2芯ツイスト (コイル状密巻き)"
+      termination: "裸線"
+    connection:
+      from: "dsm-001"           # Linn Majik DSM/3
+      to: "speaker-001"         # TANNOY Greenwich L/R
+    notes: "米国直輸入品 (Procable)。コイル効果で高域上昇を抑制する設計。"
+
+  # Handmade Surround用 (サラウンド L/R)
+  - id: spk-cable-002
+    name: "Amazonベーシック スピーカーケーブル"
+    category: speaker
+    manufacturer: "Amazon Basics"
+    model: "SW100ft"
+    length_m: null              # 切り出し使用
+    quantity: 2                 # L/R用
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      conductor_material: "CCA (銅クラッドアルミ)"
+      gauge: "16AWG"
+      structure: "2芯"
+      termination: "裸線"
+    connection:
+      from: "avr-001"           # Marantz NR1608
+      to: "speaker-002"         # Handmade Surround L/R
+    notes: ""
+
+  # ========== RCAインターコネクト ==========
+
+  # AVR → Linn DSM Pre Out接続用
+  - id: rca-001
+    name: "Amazonベーシック RCAケーブル"
+    category: interconnect
+    manufacturer: "Amazon Basics"
+    model: "PBH-20216"
+    length_m: 1.2
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      connector_type: "RCA"
+      cable_type: "Composite"
+    connection:
+      from: "avr-001"           # Marantz NR1608 Pre Out
+      to: "dsm-001"             # Linn Majik DSM/3
+    notes: ""
+
+  # Technics SL-1200 → Linn DSM Phono入力
+  - id: rca-002
+    name: "Technics 付属 Phono RCAケーブル"
+    category: interconnect
+    manufacturer: "Technics"
+    model: ""
+    length_m: null              # 付属品
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      connector_type: "RCA"
+    connection:
+      from: "turntable-001"     # Technics SL-1200MK5
+      to: "dsm-001"             # Linn Majik DSM/3 Phono入力
+    notes: "ターンテーブル付属品"
+
+  # Linn DSM → サブウーファー
+  - id: rca-003
+    name: "Amazonベーシック RCAケーブル"
+    category: interconnect
+    manufacturer: "Amazon Basics"
+    model: ""
+    length_m: null
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      connector_type: "RCA"
+    connection:
+      from: "dsm-001"           # Linn Majik DSM/3 Pre Out
+      to: "speaker-003"         # YAMAHA YST-SW105
+    notes: ""
+
+  # ========== HDMIケーブル ==========
+
+  # AVR → プロジェクター接続用
+  - id: hdmi-001
+    name: "Amazonベーシック HDMIケーブル ハイスピード"
+    category: digital
+    manufacturer: "Amazon Basics"
+    model: "HL-007311"
+    length_m: 7.6
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      type: "HDMI Type A"
+      version: "High Speed"
+      features:
+        - "4K"
+        - "ARC"
+      structure: "ラウンド"
+    connection:
+      from: "avr-001"           # Marantz NR1608 HDMI Out
+      to: "projector-001"       # XGIMI Elfin
+    notes: ""
+
+  # ========== ネットワークケーブル ==========
+
+  # Linn Majik DSM用 LANケーブル
+  - id: lan-cable-001
+    name: "エレコム CAT6A フラットLANケーブル"
+    category: network
+    manufacturer: "ELECOM"
+    model: "LC100-039FW"
+    length_m: 10.0
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      category: "CAT6A"
+      max_speed: "10Gbps"
+      bandwidth: "500MHz"
+      cable_type: "UTP"
+      structure: "フラットタイプ (厚さ1.6mm)"
+      conductor: "より線 (32AWG)"
+      connector: "RJ-45"
+      wiring: "ストレート結線"
+    connection:
+      from: "router-001"        # Buffalo WXR-5700AX7P
+      to: "dsm-001"             # Linn Majik DSM/3
+    notes: "10GBASE-T対応、CAT6/5e/5下位互換"
+

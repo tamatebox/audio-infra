@@ -1,0 +1,80 @@
+# スピーカーインベントリ
+# メインスピーカー、サラウンドスピーカー、サブウーファー等
+
+speakers:
+  - id: speaker-001
+    name: "TANNOY Greenwich"
+    category: main               # main / surround / center / subwoofer / height
+    manufacturer: "TANNOY"
+    model: "Greenwich"
+    purchased_date: 2025-02-24   # 中古購入
+    purchase_price: 88000        # JPY (定価138,000円/台、1986年頃)
+    serial_number: ""
+    specifications:
+      type: "2-way 1-speaker, Variable Distributed Port, Bookshelf"
+      driver: "20cm Dual Concentric (2008C)"
+      power_handling:
+        continuous: "75W"
+        peak: "150W"
+      sensitivity: "90dB/W/m"
+      impedance: "8Ω (6Ω minimum)"
+      frequency_response: "45Hz - 20kHz ±3dB (port open)"
+      crossover: "1.8kHz"
+      thd: "0.5% or less (90dB SPL)"
+      treble_control: "2kHz-20kHz (-6dB to +4dB continuously variable)"
+      enclosure:
+        material: "Walnut solid wood, Medite baffle"
+        port: "Variable Distributed Port System (25Hz-100Hz adjustable)"
+        volume: "40L"
+      dimensions:
+        width: "380mm"
+        height: "580mm"
+        depth: "270mm"
+        weight: "15kg"
+    quantity: 2
+    position: "Front L/R"
+    notes: "1986年頃発売のビンテージモデル"
+
+  - id: speaker-002
+    name: "Handmade Bookshelf Speaker"
+    category: surround           # main / surround / center / subwoofer / height
+    manufacturer: "Handmade"
+    model: ""
+    purchased_date: null
+    purchase_price: null         # 譲り受け
+    serial_number: ""
+    specifications:
+      type: "1-way Bookshelf"
+      driver: "Unknown"
+    quantity: 2
+    position: "Surround L/R"
+    notes: "譲り受け、詳細スペック不明"
+
+  - id: speaker-003
+    name: "YAMAHA YST-SW105"
+    category: subwoofer
+    manufacturer: "YAMAHA"
+    model: "YST-SW105"
+    purchased_date: 2025-02-17   # 中古購入
+    purchase_price: 6055         # JPY (定価20,000円、2001年発売)
+    serial_number: ""
+    specifications:
+      type: "1-way Active Subwoofer, A-YST, Floor type"
+      driver: "20cm Cone Woofer"
+      amplifier: "100W (5Ω)"
+      frequency_response: "30Hz - 200Hz (-10dB)"
+      high_cut_filter: "50Hz - 150Hz (continuously variable)"
+      features:
+        - "A-YST (Advanced Yamaha Active Servo Technology)"
+        - "Auto Standby"
+        - "B.A.S.S. Mode (Movie/Music)"
+        - "Magnetic Shielding"
+      power_consumption: "60W"
+      dimensions:
+        width: "235mm"
+        height: "365mm"
+        depth: "312mm"
+        weight: "9.5kg"
+    quantity: 1
+    position: "Subwoofer"
+    notes: "2001年発売モデル"

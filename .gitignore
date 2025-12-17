@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*~
+
+# Large binary backups (use Git LFS for intentional large files)
+*.zip
+*.tar.gz
+*.rar
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
