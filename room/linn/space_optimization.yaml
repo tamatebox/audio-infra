@@ -1,0 +1,36 @@
+# Linn Space Optimization - Room Mode Filters
+# 測定日: 2025-12-19
+
+front_left:
+  filters:
+    - frequency: 46.63
+      bandwidth: 4.81
+      gain: -19.66
+    - frequency: 65.92
+      bandwidth: 13.1
+      gain: -8.26
+    - frequency: 78.86
+      bandwidth: 14.99
+      gain: -9.04
+
+front_right:
+  filters:
+    - frequency: 46.63
+      bandwidth: 5.08
+      gain: -18.72
+    - frequency: 65.67
+      bandwidth: 11.92
+      gain: -9.84
+    - frequency: 79.1
+      bandwidth: 12.17
+      gain: -12.71
+
+# 理論的ルームモードとの対応
+# 部屋寸法: 2671mm (W) x 3743mm (D) x 2594mm (H)
+#
+# 46Hz: 奥行の1次モード (理論値 45.8Hz)
+# 65-66Hz: 幅(64.2Hz)と高さ(66.2Hz)の複合モード
+# 78-79Hz: 斜めモード or 複合モード
+#
+# 右チャンネルの79Hzで補正が深いのは、右スピーカーが
+# 押入れの凹みに近い位置にあるため
