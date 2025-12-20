@@ -133,12 +133,3 @@ placement:
 
 - `main`: 現在のシステム構成
 - `experiment/*`: 試験的な変更（A/Bテスト等）
-
-## Git LFS
-
-3Dスキャンデータ（`.glb`, `.usdz`, `.obj`, `.fbx`, `.ply`）と測定データ（`.mdat`）はGit LFSで管理。
-
-```bash
-git lfs install
-git lfs pull
-```
