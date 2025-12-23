@@ -42,9 +42,7 @@
 [Marantz AVR] → [Surround L/R]
 ```
 
-### CDリッピングワークフロー
-
-![Ripping Workflow](topology/ripping_workflow.png)
+### CDリッピング環境
 
 | ID | 機器 | 役割 |
 |----|------|------|
@@ -55,8 +53,6 @@
 ```txt
 CD → BDR-XS07JL → MacBook Pro (XLD/ALAC) → Nextcloud → NUC HDD → Roon → Linn DSM
 ```
-
-XLD設定: [photos/settings/xld_settings.png](photos/settings/xld_settings.png)
 
 ## ディレクトリ構成
 
@@ -123,8 +119,14 @@ placement:
 
 機器とインシュレーターの物理的な積層（上から下への接触関係）を表す。
 
+### ripping_workflow.mmd - CDリッピングワークフロー
+
+![Ripping Workflow](topology/ripping_workflow.png)
+
+CDからNUCへの音楽取り込みフロー。XLD設定は [photos/settings/xld_settings.png](photos/settings/xld_settings.png) を参照。
+
 > **Note:** `.mmd`ファイルを編集後、pngへのレンダリングが必要。
-> Mermaid CLI (`mmdc`) または VSCode拡張等で生成。
+> Mermaid CLI (`mmdc -s 3` で高解像度) または VSCode拡張等で生成。
 
 ## 運用ルール
 
