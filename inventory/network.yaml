@@ -79,3 +79,89 @@ network:
         depth: "60mm"
         weight: "830g"
     notes: ""
+
+  - id: storage-001
+    name: "Seagate BarraCuda 8TB"
+    category: storage             # storage
+    manufacturer: "Seagate"
+    model: "ST8000DM004"
+    purchased_date: 2022-07-13
+    purchase_price: 12480        # JPY
+    serial_number: ""
+    specifications:
+      type: "Internal HDD"
+      capacity: "8TB"
+      form_factor: "3.5 inch"
+      interface: "SATA 6Gb/s"
+      rpm: "5400"
+      cache: "256MB"
+      technology: "SMR (Shingled Magnetic Recording)"
+      max_sustained_transfer: "190MB/s"
+      power:
+        operating: "5.3W"
+        idle: "3.4W"
+        standby: "0.25W"
+      warranty: "2 years"
+    enclosure: "enclosure-001"    # 玄人志向 GW3.5AM-SU3G2P
+    connection: "NUC (server-001) USB 3.2 Gen2接続"
+    role: "Music Library Storage"
+    notes: "ALAC音源をNextcloud経由で保存"
+
+  - id: enclosure-001
+    name: "玄人志向 HDDケース"
+    category: storage             # HDD enclosure
+    manufacturer: "玄人志向"
+    model: "GW3.5AM-SU3G2P"
+    purchased_date: 2022-07-12
+    purchase_price: 2392         # JPY
+    serial_number: ""
+    specifications:
+      type: "3.5 inch HDD Enclosure"
+      interface: "USB 3.2 Gen2"
+      max_capacity: "24TB"
+      internal_interface: "SATA"
+      material: "アルミ筐体"
+      design: "ツールレス設計"
+      dimensions:
+        length: "177mm"
+        width: "31mm"
+        height: "110mm"
+    connection: "NUC (server-001) USB接続"
+    contains: "storage-001"       # Seagate BarraCuda 8TB
+    notes: ""
+
+  - id: workstation-001
+    name: "MacBook Pro 14\" M1 Max"
+    category: workstation         # laptop / workstation
+    manufacturer: "Apple"
+    model: "MacBook Pro 14-inch (2021)"
+    purchased_date: null
+    purchase_price: null         # JPY
+    serial_number: ""
+    specifications:
+      type: "Laptop"
+      processor: "Apple M1 Max"
+      display: "14.2 inch Liquid Retina XDR"
+      connectivity:
+        - "Thunderbolt 4 x 3"
+        - "HDMI"
+        - "SDXC card slot"
+        - "MagSafe 3"
+        - "3.5mm headphone jack"
+        - "Wi-Fi 6"
+        - "Bluetooth 5.0"
+    role: "CD Ripping Workstation"
+    software:
+      ripping:
+        app: "XLD (X Lossless Decoder)"
+        mode: "XLD Secure Ripper"
+        output_format: "ALAC"
+        settings:
+          c2_error_info: true
+          max_retry: 20
+          read_offset: 667
+          drive_speed_limit: "2x"
+          accuraterip: true
+          log: "always"
+          replay_gain: true
+    notes: "BDR-XS07JLを接続してリッピング、Nextcloud経由でNUCに転送"

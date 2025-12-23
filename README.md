@@ -42,6 +42,22 @@
 [Marantz AVR] → [Surround L/R]
 ```
 
+### CDリッピングワークフロー
+
+![Ripping Workflow](topology/ripping_workflow.png)
+
+| ID | 機器 | 役割 |
+|----|------|------|
+| drive-001 | Pioneer BDR-XS07JL | CDリッピング |
+| workstation-001 | MacBook Pro 14" M1 Max | XLDでリッピング |
+| storage-001 | Seagate BarraCuda 8TB | 音楽ライブラリ保存 |
+
+```txt
+CD → BDR-XS07JL → MacBook Pro (XLD/ALAC) → Nextcloud → NUC HDD → Roon → Linn DSM
+```
+
+XLD設定: [photos/settings/xld_settings.png](photos/settings/xld_settings.png)
+
 ## ディレクトリ構成
 
 ```bash

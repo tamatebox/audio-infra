@@ -1,0 +1,68 @@
+%% CD Ripping Workflow
+%% CDリッピングから再生までのデータフロー
+
+graph LR
+    %% ========== 入力 ==========
+    CD[CD]
+
+    %% ========== リッピング機器 ==========
+    BDR[Pioneer BDR-XS07JL<br/>drive-001]
+    MBP[MacBook Pro 14 M1 Max<br/>workstation-001]
+
+    %% ========== ソフトウェア ==========
+    XLD[XLD<br/>Secure Ripper]
+
+    %% ========== ストレージ ==========
+    NEXTCLOUD[Nextcloud<br/>on NUC]
+    HDD[Seagate BarraCuda 8TB<br/>storage-001<br/>in GW3.5AM-SU3G2P]
+    NUC[Intel NUC8i5BEH<br/>server-001]
+
+    %% ========== 再生系 ==========
+    ROON[Roon Core]
+    DSM[Linn Majik DSM/3<br/>dsm-001]
+    SPEAKER[TANNOY Greenwich<br/>speaker-001]
+
+    %% ========== データフロー ==========
+    CD -->|読み取り| BDR
+    BDR -->|USB 3.1| MBP
+    MBP -->|リッピング| XLD
+    XLD -->|ALAC出力| MBP
+    MBP -->|Wi-Fi / Nextcloud| NEXTCLOUD
+    NEXTCLOUD -->|保存| HDD
+    HDD -->|USB 3.2 Gen2| NUC
+    NUC -->|Roon Core| ROON
+    ROON -->|Ethernet| DSM
+    DSM -->|スピーカーケーブル| SPEAKER
+
+    %% ========== サブグラフ ==========
+    subgraph リッピング環境
+        CD
+        BDR
+        MBP
+        XLD
+    end
+
+    subgraph ストレージ/サーバー
+        NEXTCLOUD
+        HDD
+        NUC
+        ROON
+    end
+
+    subgraph 再生環境
+        DSM
+        SPEAKER
+    end
+
+    %% ========== スタイリング ==========
+    classDef input fill:#ffebee,stroke:#c62828
+    classDef ripping fill:#e3f2fd,stroke:#1565c0
+    classDef storage fill:#f3e5f5,stroke:#7b1fa2
+    classDef playback fill:#e8f5e9,stroke:#2e7d32
+    classDef software fill:#fff8e1,stroke:#ff8f00
+
+    class CD input
+    class BDR,MBP ripping
+    class XLD software
+    class NEXTCLOUD,HDD,NUC,ROON storage
+    class DSM,SPEAKER playback

@@ -235,6 +235,45 @@ electronics:
         weight: "12kg"
     notes: "中古購入"
 
+  - id: drive-001
+    name: "Pioneer BDR-XS07JL"
+    category: transport          # optical drive
+    manufacturer: "Pioneer"
+    model: "BDR-XS07JL"
+    purchased_date: null
+    purchase_price: null         # JPY
+    serial_number: ""
+    specifications:
+      type: "Portable BD/DVD/CD Writer"
+      interface: "USB 3.1 Gen1 / 3.0 / 2.0"
+      supported_media:
+        read:
+          - "BD-ROM/R/RE (SL/DL/TL/QL)"
+          - "DVD-ROM/R/RW/RAM/+R/+RW (SL/DL)"
+          - "CD-ROM/R/RW/DA"
+          - "M-DISC (BD/DVD)"
+        write:
+          - "BD-R/RE (SL/DL/TL/QL)"
+          - "DVD-R/RW/RAM/+R/+RW (SL/DL)"
+          - "CD-R/RW"
+          - "M-DISC (BD/DVD)"
+      read_speed:
+        bd: "6X Max (data), 2X (movie)"
+        dvd: "8X Max (data), 5X Max (video)"
+        cd: "24X Max"
+      write_speed:
+        bd_r: "6X Max"
+        dvd_r: "8X Max"
+        cd_r: "24X Max"
+      buffer: "4MB"
+      dimensions:
+        width: "135mm"
+        depth: "135mm"
+        height: "18mm"
+        weight: "280g"
+    role: "CD Ripping"
+    notes: "MacBook Pro M1 Maxに接続してXLDでリッピング"
+
   - id: player-002
     name: "PlayStation 4 Slim"
     category: player             # game console

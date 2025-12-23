@@ -340,6 +340,31 @@ accessories:
       # PS4, プロジェクター, NUCは別電源
     notes: "PS4・プロジェクター・NUC以外の機器を接続"
 
+  # BDR-XS07JL用インシュレーター
+  # 構成（上から下へ）:
+  #   Pioneer BDR-XS07JL
+  #   └─ ソルボセイン x3 (三点支持)
+  #   └─ デスク天板
+
+  - id: insulator-013
+    name: "東京防音 ソルボセイン (BDR-XS07JL用)"
+    category: insulator
+    manufacturer: "東京防音"
+    model: "TSS-328"
+    quantity: 3
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      material: "ソルボセイン (粘着付)"
+      color: "ブラック"
+      size: "φ28mm x 3mm"
+      weight: "20g (4個入り)"
+    placement:
+      under: "drive-001"          # Pioneer BDR-XS07JL
+      position: "三点支持"
+      layer: 1
+    notes: "CDリッピング時の振動対策"
+
   # 拡散パネル（自作）
   - id: treatment-001
     name: "自作拡散パネル"
