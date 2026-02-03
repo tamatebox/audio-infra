@@ -1,0 +1,82 @@
+# Linn Space Optimization - Room Mode Filters
+# 測定日: 2026-02-03
+# 状態: Absorption / Optimisation Preference / 温湿度調整後
+#       スピーカー位置は未変更
+
+front_left:
+  filters:
+    - frequency: 46.39
+      bandwidth: 6.79
+      gain: -13.19
+      comment: >
+        奥行1次モード（理論値 45.8Hz）。
+        過剰な定在波の尾のみを抑制し、
+        低音の胴・音程感は残す設定。
+
+    - frequency: 66.65
+      bandwidth: 14.61
+      gain: -6.18
+      comment: >
+        幅(64.2Hz)＋高さ(66.2Hz)の複合モード。
+        音楽的な厚みを損なわない最小限の補正。
+
+    - frequency: 79.35
+      bandwidth: 17.12
+      gain: -6.45
+      comment: >
+        斜め／複合モード。
+        広帯域・浅め補正により、
+        空間の回転感と定位の自然さを優先。
+
+front_right:
+  filters:
+    - frequency: 46.39
+      bandwidth: 6.58
+      gain: -13.74
+      comment: >
+        奥行1次モード。
+        左右でほぼ一致した補正量により、
+        低音の重心を安定させる。
+
+    - frequency: 66.41
+      bandwidth: 12.59
+      gain: -8.71
+      comment: >
+        幅＋高さの複合モード。
+        右側（押入れ・凹み・拡散構造）の影響を考慮し、
+        左よりやや深めの補正。
+
+    - frequency: 79.35
+      bandwidth: 13.26
+      gain: -10.90
+      comment: >
+        右側の斜め／複合モード。
+        梁・凹み由来のエネルギー集中を抑え、
+        右上方向への不自然な定位を防止。
+
+# 環境・前提条件
+environment:
+  inside_temperature_celsius: 18
+  humidity_percent: 30
+
+optimisation_preference:
+  flat_frequency_response_percent: 65
+  short_decay_time_percent: 35
+
+absorption:
+  drywall_percent: 0
+  unknown_floor_percent: 15
+  comment: >
+    畳＋ラグを考慮し、床をデフォルトより柔らかく設定。
+    低音補正の過剰化を防ぐための前提修正。
+
+# 理論的ルームモードとの対応
+# 部屋寸法: 2671mm (W) x 3743mm (D) x 2594mm (H)
+#
+# 46Hz  : 奥行1次モード (理論値 45.8Hz)
+# 65Hz  : 幅1次 (64.2Hz) + 高さ1次 (66.2Hz) の複合
+# 79Hz  : 斜め／複合モード
+#
+# 現在の設定は:
+# - 「量を削る」ではなく「時間と残響を整える」思想
+# - 空間の回転感を維持しつつ、低音の胴を残すバランス
