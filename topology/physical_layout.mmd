@@ -40,30 +40,39 @@ graph TB
         SUB --> INS9 --> INS10 --> INS11 --> FLOOR2
     end
 
-    %% ========== Linn DSM ==========
-    subgraph LINN["Linn Majik DSM"]
+    %% ========== Linn DSM + パワーアンプ ==========
+    subgraph LINN["Linn Akurate DSM + パワーアンプ"]
         direction TB
-        DSM[Linn Majik DSM/3<br/>dsm-001]
+        DSM[Linn Akurate DSM/2<br/>dsm-001]
         DSM_FOOT[本体インシュレーター]
         INS12[東京防音 ソルボセイン x4<br/>insulator-012]
-        RACK_BTM[テレビボード下段<br/>rack-001]
+        RACK_MID_L[テレビボード中段<br/>rack-001]
 
-        DSM --> DSM_FOOT --> INS12 --> RACK_BTM
+        DSM --> DSM_FOOT --> INS12 --> RACK_MID_L
+    end
+
+    subgraph POWERAMP["パワーアンプ"]
+        direction TB
+        AMP[BRZHIFI PA-A1S<br/>amp-001]
+        RACK_MID_R[テレビボード中段<br/>rack-001]
+
+        AMP --> RACK_MID_R
     end
 
     %% ========== テレビボード機器配置 ==========
     subgraph RACK["テレビボード (rack-001)"]
         direction TB
-        R_TOP[天板]
-        R_MID[中段]
-        R_BTM[下段]
+        R_TOP[天板<br/>ターンテーブル + Apple TV]
+        R_MID[中段<br/>Linn DSM + パワーアンプ]
+        R_BTM[下段<br/>AVアンプ + PS4]
 
         R_TOP --- R_MID --- R_BTM
     end
 
     %% ラックと機器の関連
     RACK_TOP -.-> R_TOP
-    RACK_BTM -.-> R_BTM
+    RACK_MID_L -.-> R_MID
+    RACK_MID_R -.-> R_MID
 
     %% ========== スタイリング ==========
     classDef equipment fill:#e3f2fd,stroke:#1565c0
@@ -71,7 +80,7 @@ graph TB
     classDef support fill:#e8f5e9,stroke:#2e7d32
     classDef rack fill:#fce4ec,stroke:#c2185b
 
-    class TANNOY,SL1200,SUB,DSM equipment
+    class TANNOY,SL1200,SUB,DSM,AMP equipment
     class INS1,INS2,INS3,INS4,INS5,INS6,INS7,INS8,INS9,INS10,INS11,INS12,DSM_FOOT insulator
-    class FLOOR1,FLOOR2,RACK_TOP,RACK_BTM support
+    class FLOOR1,FLOOR2,RACK_TOP,RACK_MID_L,RACK_MID_R support
     class R_TOP,R_MID,R_BTM rack

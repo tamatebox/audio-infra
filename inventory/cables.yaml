@@ -22,7 +22,7 @@ cables:
       structure: "2芯ツイスト (コイル状密巻き)"
       termination: "裸線"
     connection:
-      from: "dsm-001"           # Linn Majik DSM/3
+      from: "amp-001"           # BRZHIFI PA-A1S
       to: "speaker-001"         # TANNOY Greenwich L/R
     notes: "米国直輸入品 (Procable)。コイル効果で高域上昇を抑制する設計。"
 
@@ -48,7 +48,7 @@ cables:
 
   # ========== RCAインターコネクト ==========
 
-  # AVR → Linn DSM Pre Out接続用
+  # AVR → Linn DSM 接続用
   - id: rca-001
     name: "Amazonベーシック RCAケーブル"
     category: interconnect
@@ -62,7 +62,7 @@ cables:
       cable_type: "Composite"
     connection:
       from: "avr-001"           # Marantz NR1608 Pre Out
-      to: "dsm-001"             # Linn Majik DSM/3
+      to: "dsm-001"             # Linn Akurate DSM/2
     notes: ""
 
   # Technics SL-1200 → Linn DSM Phono入力
@@ -78,7 +78,7 @@ cables:
       connector_type: "RCA"
     connection:
       from: "turntable-001"     # Technics SL-1200MK5
-      to: "dsm-001"             # Linn Majik DSM/3 Phono入力
+      to: "dsm-001"             # Linn Akurate DSM/2 Phono入力
     notes: "ターンテーブル付属品"
 
   # Linn DSM → サブウーファー
@@ -93,8 +93,25 @@ cables:
     specifications:
       connector_type: "RCA"
     connection:
-      from: "dsm-001"           # Linn Majik DSM/3 Pre Out
+      from: "dsm-001"           # Linn Akurate DSM/2 Pre Out
       to: "speaker-003"         # YAMAHA YST-SW105
+    notes: ""
+
+  # Linn DSM Pre Out → パワーアンプ
+  - id: rca-004
+    name: "Neutrik YQD420"
+    category: interconnect
+    manufacturer: "Neutrik"
+    model: "YQD420 (02049-02)"
+    length_m: 1.5
+    quantity: 2                 # L/R用
+    purchased_date: 2026-02-03
+    purchase_price: 5100        # JPY (2本セット)
+    specifications:
+      connector_type: "RCA - RCA"
+    connection:
+      from: "dsm-001"           # Linn Akurate DSM/2 RCA Pre Out
+      to: "amp-001"             # BRZHIFI PA-A1S
     notes: ""
 
   # ========== HDMIケーブル ==========
@@ -120,9 +137,44 @@ cables:
       to: "projector-001"       # XGIMI Elfin
     notes: ""
 
+  # ========== 電源ケーブル ==========
+
+  # Linn Akurate DSM用 電源ケーブル
+  - id: power-cable-001
+    name: "WATTGATE シールド電源ケーブル"
+    category: power
+    manufacturer: "WATTGATE"
+    model: "04005-04"
+    length_m: 1.0
+    purchased_date: 2026-02-03
+    purchase_price: 9800         # JPY
+    specifications:
+      type: "シールド電源ケーブル"
+      plug_color: "黒"
+    connection:
+      from: "power-strip-001"   # Procable 重鉄タップ
+      to: "dsm-001"             # Linn Akurate DSM/2
+    notes: "Akurate DSM純正ケーブルから交換"
+
+  # BRZHIFI PA-A1S用 電源ケーブル
+  - id: power-cable-002
+    name: "Linn Akurate DSM 純正電源ケーブル"
+    category: power
+    manufacturer: "Linn"
+    model: ""
+    length_m: null
+    purchased_date: null
+    purchase_price: null         # Akurate DSM付属品
+    specifications:
+      type: "電源ケーブル"
+    connection:
+      from: "power-strip-001"   # Procable 重鉄タップ
+      to: "amp-001"             # BRZHIFI PA-A1S
+    notes: "Akurate DSM付属品をパワーアンプに流用"
+
   # ========== ネットワークケーブル ==========
 
-  # Linn Majik DSM用 LANケーブル
+  # Linn Akurate DSM用 LANケーブル
   - id: lan-cable-001
     name: "エレコム CAT6A フラットLANケーブル"
     category: network
@@ -142,6 +194,6 @@ cables:
       wiring: "ストレート結線"
     connection:
       from: "router-001"        # Buffalo WXR-5700AX7P
-      to: "dsm-001"             # Linn Majik DSM/3
+      to: "dsm-001"             # Linn Akurate DSM/2
     notes: "10GBASE-T対応、CAT6/5e/5下位互換"
 

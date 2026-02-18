@@ -269,9 +269,9 @@ accessories:
       layer: 3
     notes: ""
 
-  # Linn Majik DSM用インシュレーター
+  # Linn Akurate DSM用インシュレーター
   # 構成（上から下へ）:
-  #   Linn Majik DSM/3 (本体インシュレーター)
+  #   Linn Akurate DSM/2 (本体インシュレーター)
   #   └─ 東京防音 ソルボセイン TSS-328 x4
   #   └─ テレビボード棚板
 
@@ -289,7 +289,7 @@ accessories:
       size: "φ28mm x 3mm"
       weight: "20g (4個入り)"
     placement:
-      under: "dsm-001"          # Linn Majik DSM/3
+      under: "dsm-001"          # Linn Akurate DSM/2
       position: "四隅（本体インシュレーター下）"
       layer: 1
     notes: "本体純正インシュレーターの下に設置"
@@ -315,8 +315,8 @@ accessories:
       room_position: "リスニングポイント正面"
     equipment_layout:
       top: ["turntable-001", "player-001"]      # タンテ + Apple TV
-      middle: ["avr-001"]                        # AVアンプ
-      bottom: ["dsm-001", "player-002"]          # Linn + PS4
+      middle: ["dsm-001", "amp-001"]             # Linn Akurate DSM + パワーアンプ
+      bottom: ["avr-001", "player-002"]          # AVアンプ + PS4
     notes: "10年以上前にネット購入の中古品"
 
   # 電源タップ
@@ -332,13 +332,11 @@ accessories:
       surge_protection: false
       noise_filter: false
     connected_devices:
-      - "dsm-001"          # Linn Majik DSM/3
-      - "avr-001"          # Marantz NR1608
-      - "player-001"       # Apple TV 4K
+      - "dsm-001"          # Linn Akurate DSM/2
+      - "amp-001"          # BRZHIFI PA-A1S
       - "turntable-001"    # Technics SL-1200MK5
-      - "speaker-003"      # YAMAHA YST-SW105 (アクティブサブウーファー)
-      # PS4, プロジェクター, NUCは別電源
-    notes: "PS4・プロジェクター・NUC以外の機器を接続"
+      # AVR, Apple TV, サブウーファー, PS4, プロジェクター, NUCは別壁コンセント
+    notes: "2chオーディオ系専用。その他の機器は同じ壁の別コンセントから給電。"
 
   # BDR-XS07JL用インシュレーター
   # 構成（上から下へ）:

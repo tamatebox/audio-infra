@@ -3,25 +3,24 @@
 
 electronics:
   - id: dsm-001
-    name: "Linn Majik DSM/3"
-    category: streamer          # integrated: streamer + dac + preamp + power amp
+    name: "Linn Akurate DSM/2"
+    category: streamer          # integrated: streamer + dac + preamp (no power amp)
     manufacturer: "Linn"
-    model: "Majik DSM/3 (2016/2018 Variant with HDMI-2)"
-    purchased_date: 2024-07-05   # 中古購入
-    purchase_price: 172480       # JPY
-    serial_number: "1445626"
+    model: "Akurate DSM/2 (Variant 2014, HDMI 2, 4K compatible)"
+    purchased_date: 2026-02-14   # 中古購入
+    purchase_price: 280000       # JPY (290,000 - 10,000 coupon)
+    serial_number: ""
     specifications:
-      type: "Integrated digital music player, preamplifier and power amplifier"
+      type: "Integrated digital music player and preamplifier"
       features:
         - "DS Design"
-        - "Chakra Power"
         - "Dynamik Power Supply"
-        - "Aktiv Operation"
-        - "Exakt connections"
+        - "Exakt system (4x Exakt Link)"
         - "Space Optimisation"
-        - "Phono/Turntable input stage (MM)"
-        - "Surround Sound (LPCM only)"
+        - "Phono/Turntable input stage (MC default, configurable to MM or line)"
+        - "Surround Sound"
         - "HDMI-2 with ARC"
+        - "Analog passthrough (no digitisation when Digitise=Off)"
       streaming:
         - "Tidal"
         - "Qobuz"
@@ -32,28 +31,71 @@ electronics:
         - "Calm Radio"
       inputs:
         - "HDMI x 4 (1.4 & 2.0)"
-        - "SPDIF Coax x 1"
-        - "Toslink Optical x 2"
-        - "RCA Line x 2"
-        - "RCA Phono (MM) x 1"
+        - "SPDIF Coax x 3"
+        - "Toslink Optical x 3"
+        - "XLR Balanced Line x 1"
+        - "RCA Line x 2 (1x configurable as MC/MM phono)"
         - "3.5mm AUX (front)"
         - "Ethernet (100Base-T)"
-        - "Exakt Link"
+        - "Exakt Link x 4"
       outputs:
-        - "HDMI (with ARC)"
-        - "SPDIF Coax"
-        - "Toslink Optical"
-        - "Speaker terminals"
-        - "Pre Out (RCA)"
-        - "RCA Record Out (fixed)"
-        - "Headphone 3.5mm (front)"
-        - "Exakt Link"
-      adc_spec: "96kHz/24bit"
-      phono_input: "MM, 50mV rms max, 47kΩ, 68pF"
-      headphone_out: "6V rms max, 11Ω"
-    production_period: "Sept 2016 - Aug 2020"
-    replaced_by: "Majik DSM/4 (2020 Variant)"
-    notes: ""
+        - "HDMI (2.0 Repeater, with ARC)"
+        - "SPDIF Coax (line level, no volume control)"
+        - "Toslink Optical (line level, no volume control)"
+        - "XLR Balanced Pre Out x 1 (max 4Vrms, 600Ω)"
+        - "RCA Pre Out x 2 (max 2Vrms, 300Ω)"
+        - "Headphone 3.5mm (front, max 2Vrms, <2Ω, 40mA Class-A)"
+        - "Exakt Link x 4"
+      phono_input:
+        mc: "180Ω/10nF, max 5.0mV @ 1kHz, gain +64/+54 dB, SNR >90dB"
+        mm: "47kΩ/68pF, max 70.0mV @ 1kHz, gain +40 dB, SNR >90dB"
+      line_input:
+        sensitivity: "Selectable: 1 / 2 / 4 Vrms"
+        impedance_xlr: "7.8kΩ"
+        impedance_rca: "10kΩ"
+      volume_control:
+        analog_attenuation: "Selectable: 0 / -12 / -24 dB"
+        digital_gain_range: "-80dB to +20dB"
+        digital_gain_resolution: "1dB"
+      supported_formats: "FLAC, WAV, MP3, AAC, AIFF/AIFC, ALAC, OGG/VORBIS, WMA"
+      sample_rates: "7.35k - 192kHz"
+      word_depth: "16-24 bit"
+      power:
+        sleep: "8W"
+        continuous: "32W max"
+        mains: "auto-ranging 100-240V AC 50/60Hz"
+      dimensions:
+        height: "90mm"
+        width: "379mm"
+        depth: "378mm"
+        weight: "5.84kg"
+    production_period: "Sept 2016 - March 2018"
+    replaced_by: "Akurate DSM/3 (2018)"
+    previous_equipment: "Linn Majik DSM/3 (dsm-001, sold)"
+    notes: "中古購入（現状品）、液晶暗い"
+
+  - id: amp-001
+    name: "BRZHIFI PA-A1S"
+    category: amplifier          # power amplifier, pure Class A
+    manufacturer: "BRZHIFI"
+    model: "PA-A1S"
+    purchased_date: 2026-02-03
+    purchase_price: 29361        # JPY
+    serial_number: ""
+    specifications:
+      type: "Stereo Power Amplifier (Pure Class A)"
+      design_reference: "Musical Fidelity A1 clone"
+      power_output: "20W x 2 (8Ω)"
+      channels: 2
+      impedance: "8Ω"
+      voltage: "220V / 110V"
+      material: "Aluminum Alloy"
+      dimensions:
+        width: "335mm"
+        height: "208mm"
+        depth: "75mm"
+        weight: "5.3kg"
+    notes: "Musical Fidelity A1クローン。純A級動作による滑らかで温かみのある音質。"
 
   - id: avr-001
     name: "Marantz NR1608"

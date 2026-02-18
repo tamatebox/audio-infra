@@ -22,7 +22,8 @@
 
 | ID | 機器 | 役割 |
 |----|------|------|
-| dsm-001 | Linn Majik DSM/3 | 2chオーディオ中心 (ストリーマー/DAC/プリメイン) |
+| dsm-001 | Linn Akurate DSM/2 | 2chオーディオ中心 (ストリーマー/DAC/プリアンプ) |
+| amp-001 | BRZHIFI PA-A1S | パワーアンプ (純A級 20W×2) |
 | avr-001 | Marantz NR1608 | サラウンド/映像切替 |
 
 ### スピーカー
@@ -36,8 +37,8 @@
 ### 信号経路概要
 
 ```txt
-[NUC / Apple TV / PS4] → [Marantz AVR] → [Linn DSM] → [TANNOY]
-[Technics SL-1200] → [Linn DSM (Phono)] → [TANNOY]
+[NUC / Apple TV / PS4] → [Marantz AVR] → [Linn DSM] → [PA-A1S] → [TANNOY]
+[Technics SL-1200] → [Linn DSM (Phono)] → [PA-A1S] → [TANNOY]
 [Linn DSM Pre Out] → [YAMAHA Subwoofer]
 [Marantz AVR] → [Surround L/R]
 ```
