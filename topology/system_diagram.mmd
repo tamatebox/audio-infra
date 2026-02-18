@@ -21,6 +21,9 @@ graph LR
     SUB[YAMAHA YST-SW105<br/>speaker-003]
     PROJ[XGIMI Elfin<br/>projector-001]
 
+    %% ========== アクセサリ ==========
+    FAN[KEYNICE USB冷却ファン<br/>fan-001]
+
     %% ========== ネットワーク ==========
     ROUTER[Buffalo WXR-5700AX7P<br/>router-001]
 
@@ -52,6 +55,11 @@ graph LR
     AMP -->|spk-cable-001<br/>BELDEN 9497 3m| TANNOY_L
     AMP -->|spk-cable-001<br/>BELDEN 9497 3m| TANNOY_R
 
+    %% ========== 冷却 ==========
+    AVR -.->|USB給電| FAN
+    FAN -.->|送風| AMP
+    FAN -.->|送風| AVR
+
     %% ========== 電源経路 ==========
 
     %% 壁コンセントA → 重鉄タップ → 2chオーディオ系専用
@@ -80,6 +88,8 @@ graph LR
 
     class NUC,SL1200,ATV,PS4 source
     class DSM,AMP,AVR processor
+    classDef accessory fill:#e0f2f1,stroke:#00695c
     class TANNOY_L,TANNOY_R,SUR_L,SUR_R,SUB,PROJ output
+    class FAN accessory
     class OUTLET_A,OUTLET_B,OUTLET_C,CEILING,POWER_STRIP power
     class ROUTER network

@@ -338,6 +338,34 @@ accessories:
       # AVR, Apple TV, サブウーファー, PS4, プロジェクター, NUCは別壁コンセント
     notes: "2chオーディオ系専用。その他の機器は同じ壁の別コンセントから給電。"
 
+  # 冷却ファン
+  - id: fan-001
+    name: "KEYNICE USB冷却ファン"
+    category: cooling
+    manufacturer: "KEYNICE"
+    model: "KN-618"
+    purchased_date: null
+    purchase_price: null
+    specifications:
+      type: "USB卓上ファン"
+      power_source: "USB (Micro USB)"
+      voltage: "5V DC"
+      power_consumption: "2.85W"
+      speed: "2000rpm"
+      speed_settings: 3
+      noise_level: "25dB"
+      blade_count: 9
+      blade_length: "12cm"
+      material: "金属"
+      dimensions: "70mm(D) x 120mm(W) x 120mm(H)"
+    placement:
+      target:
+        - "amp-001"            # BRZHIFI PA-A1S
+        - "avr-001"            # Marantz NR1608
+      position: "テレビボード中段/下段に送風"
+    power_source: "avr-001"    # Marantz NR1608 USB端子から給電
+    notes: "純A級パワーアンプとAVアンプの冷却用"
+
   # BDR-XS07JL用インシュレーター
   # 構成（上から下へ）:
   #   Pioneer BDR-XS07JL
