@@ -19,7 +19,8 @@ graph LR
 
     %% ========== 再生系 ==========
     ROON[Roon Core]
-    DSM[Linn Majik DSM/3<br/>dsm-001]
+    DSM[Linn Akurate DSM/2<br/>dsm-001]
+    AMP[BRZHIFI PA-A1S<br/>amp-001]
     SPEAKER[TANNOY Greenwich<br/>speaker-001]
 
     %% ========== データフロー ==========
@@ -32,7 +33,8 @@ graph LR
     HDD -->|USB 3.2 Gen2| NUC
     NUC -->|Roon Core| ROON
     ROON -->|Ethernet| DSM
-    DSM -->|スピーカーケーブル| SPEAKER
+    DSM -->|rca-004<br/>Neutrik YQD420| AMP
+    AMP -->|spk-cable-001<br/>BELDEN 9497| SPEAKER
 
     %% ========== サブグラフ ==========
     subgraph リッピング環境
@@ -51,6 +53,7 @@ graph LR
 
     subgraph 再生環境
         DSM
+        AMP
         SPEAKER
     end
 
@@ -65,4 +68,4 @@ graph LR
     class BDR,MBP ripping
     class XLD software
     class NEXTCLOUD,HDD,NUC,ROON storage
-    class DSM,SPEAKER playback
+    class DSM,AMP,SPEAKER playback
