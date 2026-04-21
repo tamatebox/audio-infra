@@ -28,7 +28,7 @@ graph LR
     ROUTER[Buffalo WXR-5700AX7P<br/>router-001]
 
     %% ========== 電源 ==========
-    OUTLET_A[壁コンセント A]
+    OUTLET_A[壁コンセント A<br/>エアコン用専用回路]
     OUTLET_B[壁コンセント B]
     OUTLET_C[壁コンセント C<br/>別部屋]
     CEILING[シーリングソケット]
@@ -62,8 +62,8 @@ graph LR
 
     %% ========== 電源経路 ==========
 
-    %% 壁コンセントA → 重鉄タップ → 2chオーディオ系専用
-    OUTLET_A -->|電源| POWER_STRIP
+    %% 壁コンセントA (エアコン用専用回路) → 重鉄タップ → 2chオーディオ系専用
+    OUTLET_A -->|power-cable-003<br/>サンワサプライ 3m延長| POWER_STRIP
     POWER_STRIP -.->|power-cable-001<br/>WATTGATE 1m| DSM
     POWER_STRIP -.->|power-cable-002<br/>Linn純正| AMP
     POWER_STRIP -.->|電源| SL1200

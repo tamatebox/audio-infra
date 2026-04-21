@@ -172,6 +172,28 @@ cables:
       to: "amp-001"             # BRZHIFI PA-A1S
     notes: "Akurate DSM付属品をパワーアンプに流用"
 
+  # 壁コンセント (エアコン用専用回路) → 重鉄タップ 延長用
+  - id: power-cable-003
+    name: "サンワサプライ 電源延長コード (3Pプラグ・3m)"
+    category: power
+    manufacturer: "サンワサプライ"
+    model: "TAP-EX253-3"
+    length_m: 3.0
+    purchased_date: 2026-03-24
+    purchase_price: 1936         # JPY
+    specifications:
+      type: "電源延長コード"
+      plug: "3Pメス-3Pオス"
+      cable_type: "VCTF"
+      conductor_size: "2.0sq"
+      outer_diameter: "8.5mm"
+      rating: "15A・125V (1500Wまで)"
+      certification: "PSE"
+    connection:
+      from: "outlet-ac-dedicated"  # エアコン用専用回路の壁コンセント
+      to: "power-strip-001"        # Procable 重鉄タップ
+    notes: "エアコン用専用回路のコンセントから重鉄タップまでの延長。2chオーディオ系の電源を専用回路化。"
+
   # ========== ネットワークケーブル ==========
 
   # Linn Akurate DSM用 LANケーブル
