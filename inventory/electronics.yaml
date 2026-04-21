@@ -95,6 +95,10 @@ electronics:
         height: "208mm"
         depth: "75mm"
         weight: "5.3kg"
+    modifications:
+      - date: 2026-03-23
+        description: "入力段のボリュームアッテネーターをバイパス"
+        reason: "信号経路からアッテネーターを除去して音質向上を狙う。音量制御はLinn DSM側で行う"
     notes: "Musical Fidelity A1クローン。純A級動作による滑らかで温かみのある音質。"
 
   - id: avr-001
